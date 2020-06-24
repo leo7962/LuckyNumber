@@ -7,7 +7,7 @@ using System;
 
 namespace LuckyNumber
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, Icon = "@mipmap/First_Icon")]
     public class MainActivity : AppCompatActivity
     {
         SeekBar seekBar;
