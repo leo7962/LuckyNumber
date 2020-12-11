@@ -27,7 +27,7 @@ namespace LuckyNumber
             SupportActionBar.Title = "My Lucky Number App";
         }
 
-        private void RollButton_Click(object sender, System.EventArgs e)
+        private void RollButton_Click(object sender, EventArgs e)
         {
             Random random = new Random();
             int luckyNumber = random.Next(seekBar.Progress) + 1;
