@@ -20,7 +20,7 @@ namespace LuckyNumber
             SetContentView(Resource.Layout.activity_main);
             seekBar = FindViewById<SeekBar>(Resource.Id.seekBar);
             resultTextView = FindViewById<TextView>(Resource.Id.resultTextView);
-            resultTextView.Text = "10";
+            resultTextView.Text = "5";
             rollButton = FindViewById<Button>(Resource.Id.rollButton);
             rollButton.Click += RollButton_Click;
 
