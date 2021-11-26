@@ -12,6 +12,7 @@ namespace LuckyNumber
         private SeekBar seekBar;
         private TextView resultTextView;
         private Button rollButton;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -20,17 +21,17 @@ namespace LuckyNumber
             SetContentView(Resource.Layout.activity_main);
             seekBar = FindViewById<SeekBar>(Resource.Id.seekBar);
             resultTextView = FindViewById<TextView>(Resource.Id.resultTextView);
-            resultTextView.Text = "5";
+            if (resultTextView != null) resultTextView.Text = "5";
             rollButton = FindViewById<Button>(Resource.Id.rollButton);
-            rollButton.Click += RollButton_Click;
+            if (rollButton != null) rollButton.Click += RollButton_Click;
 
             SupportActionBar.Title = "My Lucky Number App";
         }
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int luckyNumber = random.Next(seekBar.Progress) + 1;
+            var random = new Random();
+            var luckyNumber = random.Next(seekBar.Progress) + 1;
             resultTextView.Text = luckyNumber.ToString();
         }
     }
